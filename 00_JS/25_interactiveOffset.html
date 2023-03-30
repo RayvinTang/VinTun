@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Offset</title>
+</head>
+<body>
+	<h1>Hellow world</h1>
+	<script scr="https://code.jquery.com/jquery=3.6.0.min.js"></script>
+	<script type="text/javascript">
+		let xPos = 0;
+		let move = function () {
+			$('h1').offset({left : xPos});
+			xPos++;
+			if (xPos > 500){
+				xPos = -30;
+			}
+		}
+		function stop() {
+			clearInterval(mainloop):
+		}
+
+		let mainloop = setInterval(move, 3);
+	</script>
+	<button onclick="stop()">STOP RUNNING!</button>
+</body>
+</html>

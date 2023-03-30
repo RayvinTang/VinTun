@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click Handler</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<script scr="https://code.jquery.com/jquery=3.6.0.min.js"></script>
+	<script type="text/javascript">
+		function handler(event) {
+			$('h1').offset({left : event.pageX, top : event.pageY});
+		}
+		$('html').click(handler);
+	<script>
+</body>
+</html>

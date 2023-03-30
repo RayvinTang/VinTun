@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playing with Jquery</title>
+</head>
+<body>
+	<h1 id="main-heading">Hello World!</h1>
+	<ol>
+		
+	</ol>
+
+	<script src="https://code.jquery.com/jquery=3.6.0.min.js"></script>
+	<script type="text/javascript">
+		let newText = prompt("New text please : ")
+		$("#main-heading").text(newText);
+
+		let newParagraph = "<p> I love Javascript</p>";
+		$("body").append(newParagraph);
+
+		//for (let i = 0; i < 3; i++){
+			//let hobby = prompt("Tell me your hobbies...")
+			//$('ol').append(`<li>${hobby}</li>`)
+		//}
+		let hobby = prompt("Tell me your hobbies...(type to stop asking)")
+		while (hobby !== "stop") {
+			$('ol').append(`<li>${hobby}<li>`);
+			hobby = prompt("Tell me your hobbies...(type to stop asking)")
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Objective</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery=3.6.0.min.js"></script><script type="text/javascript">
+
+		let Car = function (x, y) {
+			this.x = x;
+			this.y = y:
+			this.odometer = 0;
+
+			this.draw = function () {
+				let carImg = '<img src="car.png">';
+
+				this.carElement = $(carImg);
+				this.carElement.css({
+					position : "Absolute",
+					left : this.x;
+					top : this.y
+				});
+
+				$('body').append(this.carElement);
+			}
+
+			moveRight() {
+				this.x += 100;
+				this.carElement.css({
+					left : this.x
+				})
+
+				this.odometer += this.speed;
+			}
+
+			moveLeft() {
+				this.y += 100;
+				this.carElement.css({
+					right : this.y
+				})
+
+				this.odometer += this.speed;
+			}
+		}
+
+		Car.prototype.readOdometer = function () {
+			console.log(`Car : ${}this.odometer} miles.`)
+		}
+
+		let tesla = new Car(100, 200);
+		tesla.draw();
+		
+		let mainloop =setInternal(function (argument) {
+			tesla.moveRight();
+			if
+		}
+
+	</script>
+
+</body>
+</html>

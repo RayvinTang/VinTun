@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive And Stop</title>
+	<script type="text/javascript">
+		let alarm = setTimeout( () => {alert("you need to do your homework")},3000)
+
+		function startStopAlarm() {
+
+			if (document.querySelector("#status").innerHTML === "on"){
+				clearTimeout(alarm);
+				document.querySelector("#status").innerHTML = "off";
+				document.querySelector("button").innerHTML = "Start alarm";
+			} else { 
+				document.querySelector("#status").innerHTML = "on";
+				document.querySelector("button").innerHTML = "Stop alarm";
+				alarm = setTimeout( () => {alert("You need to do your homework")}, 3000);
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<h1>Alarrm On</h1>
+	<button onclick="stopAlarm()" style="display:block; margin-left: auto; margin-right: auto">Stop Alarm</button>
+
+</body>
+</html>
